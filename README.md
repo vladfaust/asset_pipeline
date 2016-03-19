@@ -81,7 +81,7 @@ AssetPipeline::Tasks.install
 # config.ru
 #
 
-map "/#{AssetPipeline.path_prefix}" do
+map "#{AssetPipeline.path_prefix}" do
   run AssetPipeline.sprockets
 end
 ```

@@ -22,7 +22,7 @@ module AssetPipeline
   end
 
   self.sprockets             = Sprockets::Environment.new
-  self.path_prefix           = 'assets'
+  self.path_prefix           = '/assets'
   self.public_folder         = 'public'
   self.assets_public_path    = File.join(public_folder, path_prefix)
   self.assets_precompile     = %w(*application.js *application.css *.png *.jpg *.svg *.eot *.ttf *.woff *.woff2)
