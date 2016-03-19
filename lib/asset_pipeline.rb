@@ -25,7 +25,7 @@ module AssetPipeline
   self.path_prefix           = 'assets'
   self.public_folder         = 'public'
   self.assets_public_path    = File.join(public_folder, path_prefix)
-  self.assets_precompile     = %w(application.js application.css *.png *.jpg *.svg *.eot *.ttf *.woff *.woff2)
+  self.assets_precompile     = %w(*application.js *application.css *.png *.jpg *.svg *.eot *.ttf *.woff *.woff2)
   self.assets_paths          = %w(assets vendor/assets)
   self.assets_protocol       = nil
   self.assets_css_compressor = nil
