@@ -76,6 +76,14 @@ end
 require_relative 'config/initializers/assets'
 
 # This adds assets:clean and assets:precompile tasks
+#
+# New in 0.2.0:
+#   You may want to rewrite some already defined ones, 
+#   like Hanami's assets:precompile (otherwise they will be executed too).
+#   In this case, pass { clear: [*tasks] } as an option:
+#
+#   AssetPipeline::Tasks.install(clear: ['assets:precompile'])
+#
 AssetPipeline::Tasks.install
 
 # config.ru
