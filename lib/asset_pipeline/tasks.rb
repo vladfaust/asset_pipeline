@@ -19,7 +19,16 @@ module AssetPipeline
       end
     end
 
-    def self.install
+    # Installs the tasks
+    #
+    # @param [Hash] options options
+    #   @option options [Array] :clear ([]) Tasks to clear
+    #
+    # @example Clear previously declared tasks
+    #   install(clear: ['assets:precompile', 'assets:clean'])
+    #
+    def self.install(options = {})
+      options.fetch(:clear, []).each { |task| Rake::Task[task].clear}
       self.new
     end
   end
