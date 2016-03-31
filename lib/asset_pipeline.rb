@@ -39,6 +39,7 @@ module AssetPipeline
 
   def self.config
     yield self
+    self.assets_public_path = File.join(public_folder, path_prefix)
     self.setup!
   end
 
